@@ -38,7 +38,12 @@ if not sprueche:
 if "spruch" not in st.session_state:
     st.session_state.spruch = random.choice(sprueche)
 
-st.write(st.session_state.spruch)
+#st.write(st.session_state.spruch)
+
+st.markdown(
+    f"<h2 style='text-align: center; font-weight: bold;'>{st.session_state.spruch}</h2>",
+    unsafe_allow_html=True
+)
 
 if st.button("➡️ Nächster Spruch"):
     neuer = random.choice(sprueche)
