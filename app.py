@@ -40,8 +40,26 @@ if "spruch" not in st.session_state:
 
 #st.write(st.session_state.spruch)
 
+#st.markdown(
+    #f"<h2 style='text-align: center; font-weight: bold;'>{st.session_state.spruch}</h2>",
+    #unsafe_allow_html=True
+#)
+
 st.markdown(
-    f"<h2 style='text-align: center; font-weight: bold;'>{st.session_state.spruch}</h2>",
+    f"""
+    <div style="
+        font-size:34px;
+        font-weight:600;
+        text-align:center;
+        padding:40px;
+        border-radius:20px;
+        background-color:#1e1e1e;
+        color:white;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    ">
+        “{st.session_state.spruch}”
+    </div>
+    """,
     unsafe_allow_html=True
 )
 
